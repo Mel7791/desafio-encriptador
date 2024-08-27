@@ -26,8 +26,8 @@ function btnEncriptar(){
     const textoEncriptado = encriptar(textArea.value)
     secret.value = textoEncriptado
     textArea.value = "";
-    document.getElementById("sobre").style.display ='none'; //hacer desaparecer imagen
-    document.getElementById("message-encriptado").style.display ='none'; //hacer desaparecer h2
+    document.getElementById("sobre").style.display ='none'; //desaparece img
+    document.getElementById("message-encriptado").style.display ='none'; //desaparece h2
 }
 
 //Desencriptar
@@ -37,7 +37,7 @@ function desencriptar(stringDesencriptado){
 
     for(let i = 0; i <matrizCodigo.length; i++){
         if(stringDesencriptado.includes(matrizCodigo[i][1])){
-         stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
+         stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]); //inverso
         }
     }
     return stringDesencriptado
@@ -46,7 +46,7 @@ function desencriptar(stringDesencriptado){
 function btnDesencriptar(){
     const textoEncriptado = desencriptar(textArea.value)
     secret.value = textoEncriptado
-    textArea.value = "";
+    textArea.value = ""; //limpia valor usuario
 }
 
 //Copiar
@@ -56,23 +56,20 @@ function copiarResultado() {
   if (secret) {
     const textToCopy = secret.value || secret.innerText;
 
-    // Create a temporary textarea element
-    const tempTextArea = document.createElement("textarea");
+    const tempTextArea = document.createElement("textarea"); 
     tempTextArea.value = textToCopy;
-    document.body.appendChild(tempTextArea);
+    document.body.appendChild(tempTextArea); // Crea textarea temporal
 
-    // Select the text inside the textarea
-    tempTextArea.select();
-    tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+    tempTextArea.select(); // Selecciona el texto q esta dentro de textarea
+    tempTextArea.setSelectionRange(0, 99999); // Para celulares
 
-    // Copy the text
-    document.execCommand("copy");
+    document.execCommand("copy");  // Copia texto
 
-    // Remove the temporary textarea
-    document.body.removeChild(tempTextArea);
+    document.body.removeChild(tempTextArea); // Limpia textarea temporal
   }
 }
-//Screen size for img and h2
+
+// Ajusta el tamano de img y h2
 function checkScreenWidth() {
 
     if (window.innerWidth <=1200) {
@@ -85,14 +82,13 @@ function checkScreenWidth() {
       }
 }
 
-// correr al abrir la pagina
+// Corre al abrir la pagina
 checkScreenWidth();
 
-// correr en differnetes dispositivos
+// Corre en differnetes dispositivos
 window.addEventListener('resize', checkScreenWidth);
   
-
-//Reiniciar juego
+//Reiniciar 
 function reiniciar() {
 
     textArea.value = ""; 

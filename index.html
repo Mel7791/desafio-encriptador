@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de mensaje</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preload" href="https://fonts.googleapis.com">
+        <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <h1 class="title">Encriptador de Mensajes Secretos</h1>
+            <div>
+                <textarea class="text" name="text" id="text" cols="10" rows="20" placeholder="Por favor, introduce tu mensaje aquí"></textarea>
+                <div class="therms">
+                    <p>Solo letras minusculas y sin acentos</p>
+                </div>
+                <div class="buttons">
+                    <button class="btn-encriptar" type="button" onclick="btnEncriptar()">Encriptar</button>
+                    <button class="btn-desencriptar" type="button" onclick="btnDesencriptar()">Desencriptar</button>
+                </div>
+            </div>
+            <div class="encriptado">
+                <img src="./images/envcut.png"alt="Imagen de un sobre abierto" id="sobre"> 
+                <div class="message-encriptado" id="message-encriptado">
+                    <h2 id="message">¿Estás preparado para encriptar tu mensaje destinado a esa persona especial?</h2>
+                </div>
+                <div class="container-buttons">
+                    <button class="btn-copiar" type="button" onclick="copiarResultado()">Copiar</button>
+                    <button class="btn-reiniciar" type="button" onclick="reiniciar()">Reiniciar</button>
+                </div>
+                <div class="result">
+                    <textarea class="result-message" id="result-message" cols="30" rows="10" ></textarea>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Desarrollado por Mellena Mongush - estudiante de <strong>Alura LATAM</strong></p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

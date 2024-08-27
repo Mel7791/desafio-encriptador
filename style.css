@@ -1,0 +1,422 @@
+:root{
+    --color-old: #DEB887;
+    --color-opaco: #3c3c3c;
+    --color-blanco: #FFFFFF;
+    --color-black: #000000;
+    --color-red: #8B0000;
+
+    --font-serif-regular: 'PT Serif', serif; /*font-weight: 400; font-style: normal;*/
+    --font-serif-regular-italic: 'PT Serif', serif; /*font-weight: 400; font-style: italic;*/
+    --font-serif-bold: 'PT Serif', serif; /*font-weight: 700; font-style: normal;*/
+    --font-serif-bold-italic: 'PT Serif', serif; /*font-weight: 700; font-style: italic;*/
+}
+
+*{
+    margin: 0;
+    padding: 0; 
+}
+
+body{
+    box-sizing: bprder-box;
+    background: var(--color-old);
+    background-image: url("/images/corazof.png");
+    background-repeat: no-repeat;
+}
+
+main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    background-color: transparent;
+    font-family: var(--font-serif-bold-italic);
+    color: var(--color-black);
+    font-weight: 700; 
+    font-style: italic;
+    font-size: 2.5rem;
+}
+
+.title:hover{
+    transform: scale(1.05);
+    color: var(--color-red);
+}
+
+.text{
+    position: absolute;
+    resize: none;
+    width: 40%;
+    height: 60%;
+    left: 15%;
+    top: 20%;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: var(--font-serif-regular);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 100%;
+}
+
+.text::placeholder{
+    color: var(--color-opaco);
+}
+
+.text:focus,
+.text:active{
+    border: none;
+    outline: none;
+}
+
+.therms{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    padding: 0px;
+    gap: 0.5rem;
+    width: 80%;
+    left: 15%;
+    top: 84%;
+}
+
+.therms p{
+    font-family: var(--font-serif-bold);
+    font-style: normal; 
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 150%;
+    color: var(--color-black);
+    flex: none;
+    order: 1;
+    flex-grow: 0
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0%;
+    position: absolute;
+    width: 65%;
+    top: 85%;
+    left: 15%;
+    gap: 2%;
+}
+
+.btn-encriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 1.2%;
+    gap: 0.5rem;
+    width: 25%;
+    background-color: var(--color-opaco);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    border: 0.0625rem solid var(--color-opaco);
+    font-family: var(--font-serif-regular);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: center;
+    color: var(--color-blanco);
+}
+
+.btn-desencriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 1.2%;
+    gap: 0.5rem;
+    width: 25%;
+    background-color: var(--color-blanco);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    border: 0.0625rem solid var(--color-opaco);
+    font-family: var(--font-serif-regular);
+    color: var(--color-black);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.btn-encriptar:hover,
+.btn-desencriptar:hover{
+    transform: scale(1.05);
+}
+
+.encriptado{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 25%;
+    left: 60%;
+    top: 17%;
+    height: 77%;
+    background: var(--color-blanco);
+    box-shadow: 0rem 3rem 4rem -0.5rem rgba(0.1, 0.1, 0.1, 0.5);
+    border-radius: 1.5rem;
+}
+
+.encriptado:hover{
+    transform: scale(1.05);
+}
+
+.message-encriptado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 1rem;
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    text-align: center;
+}
+
+.message-encriptado h2{
+    width: 90%;
+    font-family: var(--font-serif-regular-italic);
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: center;
+    padding: 5%;
+    color: var(--color-black);
+}
+
+.encriptado img{
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    top: 15%;
+}
+
+.encriptado img:hover{
+    transform: scale(1.5);
+}
+
+.result{
+    padding: 10% 5% 30% 5%;
+}
+
+.result-message{
+    width: 100%;
+    font-family: var(--font-serif-regular-italic);
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: flex-start;
+    color: var(--color-opaco);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    resize: none;
+}
+
+.result-message:focus,
+.result-message:active{
+    border: none;
+    outline: none;
+}
+
+.container-buttons{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 87%; 
+    gap: 10%; 
+}
+
+.btn-copiar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.8rem;
+    border: 0.0625rem solid var(--color-opaco);
+    cursor: pointer;
+    background-color: var(--color-opaco);
+    color: var(--color-blanco);
+    font-family: var(--font-serif-regular);
+    font-size: 1rem;
+    line-height: 2rem;
+    padding: 0.65rem 2rem;
+}
+
+.btn-copiar:hover{
+    transform: scale(1.05);
+}
+
+.btn-reiniciar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.8rem;
+    border: 0.0625rem solid var(--color-opaco);
+    cursor: pointer;
+    background-color: var(--color-blanco);
+    color: var(--color-black);
+    font-family: var(--font-serif-regular);
+    font-size: 1rem;
+    line-height: 2rem;
+    padding: 0.65rem 1.25rem;
+}
+
+.btn-reiniciar:hover{
+    transform: scale(1.05);
+}
+
+.footer{
+    background-color: var(--color-red);
+    padding: 0.5rem;
+    color: var(--color-blanco);
+    text-align: center;
+    font-family: var(--font-serif-regular);
+    font-size: 0.75rem;
+    font-weight: 400;
+    flex-shrink: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    .encriptado img {
+      display: none;
+    }
+  
+    .message-encriptado h2 {
+      display: none;
+    }
+  }
+
+@media (max-width: 1200px) {
+
+    .title {
+        font-size: 2.5rem;
+        padding: 4% 2% 0% 1%; 
+    }
+
+    .text {
+        width: 70%;
+        top: 15%;
+        font-size: 1.5rem;
+        height: 30%;
+    }
+
+    .therms{
+        width: 80%;
+        top: 47%;
+    }
+
+    .therms p{
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+        top: 50%;
+        gap: 1rem;
+    }
+
+    .btn-encriptar,
+    .btn-desencriptar {
+        width: 40%;
+        border-radius: 0.5rem;
+    }
+
+    .container-buttons{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        top: 70%;
+        gap: 1rem;
+    }
+
+    .btn-copiar,
+    .btn-reiniciar{
+        width: 46%;
+        line-height: 1.7rem;
+        border-radius: 0.5rem;
+    }
+
+    .encriptado {
+        width: 90%;
+        left: 5%;
+        top: 64%;
+        height: 30%;
+    }
+
+    .result{
+        width: 90%;
+        padding: 2% 2% 20% 2%;
+        line-height: 100%;
+    }
+
+    .result-message{
+        width: 90%;
+        padding: 1%;
+        line-height: 70%;
+    }
+
+    .footer{
+        padding: 1%;
+    }
+}
+
+@media (max-width: 767px){
+
+    .title{
+        font-size: 2rem;
+        padding: 5% 5% 0% 10%; 
+        text-align: center;
+    }
+
+    .text{
+        width: 80%;
+        top: 18%;
+        font-size: 1.1rem;
+        height: 30%;
+    }
+
+    .therms{
+        width: 60%;
+        top: 47%;
+    }
+
+    .therms p{
+        font-size: 0.8rem;
+    }
+
+    .message-encriptado h2{
+        width: 80%;
+        padding: 0%;
+        font-size: 1rem;
+    }
+
+    .result{
+        width: 90%;
+        padding: 2% 0.5% 30% 2%;
+    }
+
+    .btn-copiar,
+    .btn-reiniciar{
+    width: 40%;
+    line-height: 1.4rem;
+    border-radius: 0.5rem;
+    }
+}
+
+

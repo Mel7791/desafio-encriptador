@@ -51,22 +51,27 @@ function btnDesencriptar(){
 
 //Copiar
 function copiarResultado() {
-  const secret = document.getElementById("result-message"); 
+  const secret = document.getElementById("result-message");
 
-  //Clipboard API 
   if (secret) {
-    navigator.clipboard.writeText(secret.value || secret.innerText) 
-      .then(() => {
-        alert("Texto copiado: " + (secret.value || secret.innerText)); 
-      })
-      .catch(err => {
-        console.error("Error al copiar el texto: ", err);
-      });
-  } else {
-    alert("No se encontró el elemento para copiar.");
+    const textToCopy = secret.value || secret.innerText;
+
+    // Create a temporary textarea element
+    const tempTextArea = document.createElement("textarea");
+    tempTextArea.value = textToCopy;
+    document.body.appendChild(tempTextArea);
+
+    // Select the text inside the textarea
+    tempTextArea.select();
+    tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text
+    document.execCommand("copy");
+
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextArea);
   }
 }
-
 //Screen size for img and h2
 function checkScreenWidth() {
 

@@ -19,7 +19,7 @@
 body{
     box-sizing: bprder-box;
     background: var(--color-old);
-    background-image: url("/images/corazof.png");
+    background-image: url("./images/corazof.png");
     background-repeat: no-repeat;
 }
 

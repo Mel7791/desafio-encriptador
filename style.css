@@ -40,7 +40,7 @@ main{
     color: var(--color-black);
     font-weight: 700; 
     font-style: italic;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .title:hover{
@@ -83,7 +83,7 @@ main{
     padding: 0px;
     gap: 0.5rem;
     width: 80%;
-    left: 15%;
+    left: 16%;
     top: 84%;
 }
 
@@ -91,7 +91,7 @@ main{
     font-family: var(--font-serif-bold);
     font-style: normal; 
     font-weight: 700;
-    font-size: 0.75rem;
+    font-size: 1rem;
     line-height: 150%;
     color: var(--color-black);
     flex: none;
@@ -117,10 +117,10 @@ main{
     padding: 1.2%;
     gap: 0.5rem;
     width: 25%;
-    background-color: var(--color-opaco);
+    background-color: var(--color-black);
     border-radius: 0.8rem;
     cursor: pointer;
-    border: 0.0625rem solid var(--color-opaco);
+    border: 0.0625rem solid var(--color-black);
     font-family: var(--font-serif-regular);
     font-size: 1rem;
     font-weight: 400;
@@ -138,7 +138,7 @@ main{
     background-color: var(--color-blanco);
     border-radius: 0.8rem;
     cursor: pointer;
-    border: 0.0625rem solid var(--color-opaco);
+    border: 0.0625rem solid var(--color-black);
     font-family: var(--font-serif-regular);
     color: var(--color-black);
     font-size: 1rem;
@@ -217,7 +217,7 @@ main{
     font-weight: 400;
     line-height: 100%;
     text-align: flex-start;
-    color: var(--color-opaco);
+    color: var(--color-black);
     background: transparent;
     border: none;
     cursor: pointer;
@@ -245,9 +245,9 @@ main{
     justify-content: center;
     text-align: center;
     border-radius: 0.8rem;
-    border: 0.0625rem solid var(--color-opaco);
+    border: 0.0625rem solid var(--color-black);
     cursor: pointer;
-    background-color: var(--color-opaco);
+    background-color: var(--color-black);
     color: var(--color-blanco);
     font-family: var(--font-serif-regular);
     font-size: 1rem;
@@ -265,7 +265,7 @@ main{
     justify-content: center;
     text-align: center;
     border-radius: 0.8rem;
-    border: 0.0625rem solid var(--color-opaco);
+    border: 0.0625rem solid var(--color-black);
     cursor: pointer;
     background-color: var(--color-blanco);
     color: var(--color-black);

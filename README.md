@@ -9,4 +9,5 @@ El diseno tiene 4 botones: ```Encriptar```, ```Desencriptar```, ```Copiar```, e 
 Esta adaptada (responsive) para pantallas de una computador, tablets, y celulares de differentes marcas. 
 Tiene resaltos de botones y parafos, y el titulo cambia de color. 
 Tiene cursor para botones y el texto. 
+Background esta compuesto de background color y encima tiene una imagen. 
 
